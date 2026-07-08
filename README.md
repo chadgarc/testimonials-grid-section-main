@@ -27,8 +27,11 @@ Users should be able to:
 
 ### Screenshots
 
-<p align="left">
+<p align="center">
   <img src="./screenshot.jpg" height="500" width=auto alt="Project screenshot">
+</p>
+
+<p align="center">  
   <img src="./screenshot-mobile.jpg" height=500 alt="Project screenshot-mobile">
 </p>
 
