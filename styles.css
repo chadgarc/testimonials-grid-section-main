@@ -1,0 +1,199 @@
+/* Font Barlow Semi Condensed */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+.attribution { 
+    font-size: 0.6875rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+body { 
+    background-color: hsl(210, 46%, 95%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/* The main container for the grid, it is responsible for the page
+layout size and contains the grid container */
+main { 
+    max-width: 1440px;
+    margin: 10% 10%;
+}
+
+/** Main grid **/
+/* The grid container is responsible for the layoud I have created using
+grid-template-areas, this way is easier to manipulate the grid cards I need
+and I can manipulate the position using the grid area property in each card */
+.grid-container { 
+    display: grid;
+    /* I'm telling the grid I need 4 columns, even when I have 5 cards and I want to
+    create 3 columns, 2 cards will use 2 columns, and the last card will do the same but
+    in vertical direction*/
+    grid-template-columns: repeat(4,1fr);
+    /* This way I can manipulate the grid as a table
+    and assign each container to a specific area of the grid
+    It looks like a matrix*/
+    grid-template-areas: 
+        "top-left top-left top-middle side-right"
+        "bottom-left bottom-middle bottom-middle side-right";
+    /* This is the gap between the cards */
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+/** Cards **/
+/* Each card is a flex container, this way I can manipulate the content inside usind multiple
+containers, each one with a specific purpose*/
+.item {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 30px 50px 30px  hsl(0, 0%, 81%); 
+    border-radius: 0.5rem;
+    padding: 1.15rem;
+
+}
+
+/* Each container inside the card have this margin to separate the content from
+the card border*/
+.sub-item {
+    margin-top: .3rem;
+    margin-right: 0.7rem;
+    margin-left: 0.7rem;
+}
+
+.review{
+    margin-bottom:0;
+}
+
+/** Behaviour of every photo, name, and verified graduate **/
+/* user info contains image and details, also is a flex container*/
+.user-info {
+    display: flex;
+    /* This is to align the image and the details in the center of this flex
+    box */
+    align-items: center;
+    margin-top: 0;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* This is to delete the space between verification status and user name */
+.username{
+    margin-bottom:0;
+}
+.status {
+    margin-top: 0;
+}
+
+/** Behaviour of every highlighted text **/
+/* This is to manipulate the font of each highlighted text of each user */
+.review {
+    font-size: 1.3rem;
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+
+.quote {
+    line-height: 1.2rem;
+}
+
+
+/** Every box/card of the grid **/
+/* Daniel */
+.item-1 { 
+    /* grid-area link every position of the grid I previously modified to every box */
+    grid-area: top-left;
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%); 
+    /* Here I'm manipulating the quote image to be in the right position
+    and choosing the size.*/
+    background-image: url('./images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-size: 6.7rem auto;
+    background-position: 85% 0%;
+}
+
+.item-1 .user-image {
+    border: 3px solid hsl(264, 82%, 80%);
+}
+
+.item-1 .sub-item.quote {
+    font-size: 0.85rem;
+}
+
+/* Jonathan */
+.item-2 { 
+    grid-area: top-middle; 
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+.item-2 .quote {
+    font-size: .85rem;
+}
+
+/* Jeanette */
+.item-3 { 
+    grid-area: bottom-left; 
+    background-color: hsl(0, 0%, 100%);
+}
+
+.item-3 .review {
+    font-size: 1.4rem;
+}
+
+/* Patrick */
+.item-4 { 
+    grid-area: bottom-middle; 
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
+}
+
+.item-4 .user-image {
+    border: 3px solid hsl(263, 55%, 52%);
+}
+
+.item-4 .quote {
+    font-size: .85rem;
+}
+
+/* Kira */
+.item-5 { 
+    grid-area: side-right;
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(219, 29%, 14%);
+}
+
+.item-5 .quote {
+    font-size: .87rem;
+}
+
+.item-5, .item-3 {
+    color: hsl(217, 19%, 35%);
+}
+
+/** Responsive design for smaller screens **/
+
+@media(max-width: 800px){
+    .grid-container{
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+    }
+
+    .item {
+        grid-area: auto;
+    }
+
+    .item-1 {
+        background-image: none;
+    }
+
+}
