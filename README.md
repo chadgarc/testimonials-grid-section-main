@@ -25,9 +25,12 @@ Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+<p align="left">
+  <img src="./screenshot.jpg" height="500" width=auto alt="Project screenshot">
+  <img src="./screenshot-mobile.jpg" height=500 alt="Project screenshot-mobile">
+</p>
 
 ### Links
 
