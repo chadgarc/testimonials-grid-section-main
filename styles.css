@@ -64,10 +64,6 @@ the card border*/
     margin-left: 0.7rem;
 }
 
-.review{
-    margin-bottom:0;
-}
-
 /** Behaviour of every photo, name, and verified graduate **/
 /* user info contains image and details, also is a flex container*/
 .user-info {
@@ -95,6 +91,7 @@ the card border*/
 /** Behaviour of every highlighted text **/
 /* This is to manipulate the font of each highlighted text of each user */
 .review {
+    margin-bottom:0;
     font-size: 1.3rem;
     margin-top: .25rem;
     margin-bottom: .5rem;
@@ -104,7 +101,6 @@ the card border*/
 .quote {
     line-height: 1.2rem;
 }
-
 
 /** Every box/card of the grid **/
 /* Daniel */
@@ -125,7 +121,7 @@ the card border*/
     border: 3px solid hsl(264, 82%, 80%);
 }
 
-.item-1 .sub-item.quote {
+.item-1 .quote {
     font-size: 0.85rem;
 }
 
